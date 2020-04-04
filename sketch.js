@@ -4,6 +4,8 @@ var drawing = [];
 var currentPath = [];
 
 function  setup() {
+  var button = createButton('Erase');
+   button.position(250, 300);
   canvas = createCanvas(2000,2000);
   canvas.mousePressed(startPath);
   var config = {
@@ -21,6 +23,10 @@ function startPath(){
   currentPath = [];
   drawing.push(currentPath); 
   }
+
+    button.mousePressed(function(){
+      background(220);
+    }
 
 function draw(){
   background(220);
